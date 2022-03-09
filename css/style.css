@@ -57,15 +57,24 @@ p.caption{
 	font-size: 20px;
 }
 
-main h3{
+submain h3{
 	font-size: 30px;
 	margin: 40px 0 10px;
 }
 
-main h3 img{
+submain a{
+	color: black;
+}
+
+submain img{
 	border-radius: 150px;
 	width: 250px;
 	border: 15px solid white;
+}
+
+main a:hover{
+	background-color: black;
+	color: white;
 }
 
 /*Footer section*/
