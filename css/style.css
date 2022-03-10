@@ -3,6 +3,7 @@ body {
 	font-family: 'League Spartan', sans-serif;
 	font-size: 20px;
 	line-height: 30px;
+	text-align: center;
 }
 
 /*Header section*/
@@ -57,24 +58,11 @@ p.caption{
 	font-size: 20px;
 }
 
-submain h3{
-	font-size: 30px;
-	margin: 40px 0 10px;
-}
-
-submain a{
-	color: black;
-}
-
 submain img{
 	border-radius: 150px;
-	width: 250px;
+	width: 300px;
 	border: 15px solid white;
-}
-
-main a:hover{
-	background-color: black;
-	color: white;
+	vertical-align: middle;
 }
 
 /*Footer section*/
