@@ -42,7 +42,11 @@ county as 'County'
 from orders
 
 -- 10)	Select the average price, minimum price & maximum price for each category.
+SELECT round(avg(price),2) as 'AVG', min(price), max(price)
+from orders      
+group by category_id
 
 -- 11) 	Select the category_name (labelled 'Category', number of sales (labelled 'Total Orders') & total sales (labelled 'Total Sales') for each category.
+SELECT category_name, count(orders.id) as "Total order", sum(price) as "Total sales" from orders join categories on (orders.category_id=categories.id) group by category_name;
 
 -- 12) 	List all orders with the following fields (with the labls given) orders.trans_date('Transaction Date'), categories.category_name('Category'), orders.customer_surname('Surname'), orders.customer_firstname('Firstname'), orders.price('Order Price'), categories.category_name('Category'), promotions.discount('Discounted by') 
