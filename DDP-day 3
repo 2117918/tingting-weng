@@ -49,4 +49,6 @@ group by category_id
 -- 11) 	Select the category_name (labelled 'Category', number of sales (labelled 'Total Orders') & total sales (labelled 'Total Sales') for each category.
 SELECT category_name, count(orders.id) as "Total order", sum(price) as "Total sales" from orders join categories on (orders.category_id=categories.id) group by category_name;
 
--- 12) 	List all orders with the following fields (with the labls given) orders.trans_date('Transaction Date'), categories.category_name('Category'), orders.customer_surname('Surname'), orders.customer_firstname('Firstname'), orders.price('Order Price'), categories.category_name('Category'), promotions.discount('Discounted by') 
+-- 12) 	List all orders with the following fields (with the labels given) orders.trans_date('Transaction Date'), categories.category_name('Category'), orders.customer_surname('Surname'), orders.customer_firstname('Firstname'), orders.price('Order Price'), categories.category_name('Category'), promotions.discount('Discounted by') 
+SELECT orders.trans_date as 'Transaction Date', categories.category_name as 'Category', orders.customer_surname as 'Surname', orders.customer_firstname as 'Firstname', orders.price as 'Order Price', categories.category_name as 'Category', promotions.discount as 'Discounted by' 
+from categories,orders left outer join promotions on orders.promo_code=promotions.code where category_id=categories.id
